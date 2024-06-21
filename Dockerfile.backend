@@ -1,0 +1,15 @@
+# Use a node image for the backend
+FROM node:14
+
+WORKDIR /app
+
+# Copy package.json and install dependencies
+COPY backend/package.json /app/package.json
+RUN npm install
+
+# Copy the rest of the backend code
+COPY backend/ /app/
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
