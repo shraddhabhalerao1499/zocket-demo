@@ -1,7 +1,7 @@
 Steps to deploy and scale the web application on Kubernetes
 
 1. Take a pull of the repository
-3. Build the Docker image of frontend using command: docker build -t <image-name>ui:latest -f Dockerfile.frontend .
+2. Build the Docker image of frontend using command: docker build -t <image-name>ui:latest -f Dockerfile.frontend .
 3. Build the Docker image of backend using command: docker build -t <image-name>api:latest -f Dockerfile.backend .
 4. Deploy manifest file of frontend using command: kubectl apply -f k8s/manifests/frontend-deployment.yaml
 5. Deploy manifest file of backend using command: kubectl apply -f k8s/manifests/backend-deployment.yaml
